@@ -22,5 +22,5 @@ To view and work with this project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repository-name.git
+   git clone https://github.com/elvismusisi/typni.org.git
 # typni.org
