@@ -4,7 +4,7 @@ This project is a website submission for the Young People's Network Internationa
 
 ## Project Description
 
-This website serves as a **[typni.org]**, aiming to showcase [brief description of the project or the purpose of the site]. The design focuses on simplicity, responsiveness, and user interaction to engage the audience.
+This website serves as a prototype for **[typni.org]**, aiming to showcase [brief description of the project or the purpose of the site]. The design focuses on simplicity, responsiveness, and user interaction to engage the audience.
 
 ## Technologies Used
 - **HTML**: For creating the structure and layout of the website.
