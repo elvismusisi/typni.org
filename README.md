@@ -1,4 +1,4 @@
-# Website for Young People's Network International Contest
+# Website for The Young People's Network International Contest
 
 This project is a website submission for the Young People's Network International contest by Charlene Ruto. The website is built using simple HTML, CSS, and JavaScript.
 
