@@ -1,26 +1,37 @@
-# Website for The Young People's Network International Contest
+# 🌟 Christ Worship Center International Website
 
-This project is a website submission for the Young People's Network International contest by Charlene Ruto. The website is built using simple HTML, CSS, and JavaScript.
+Welcome to the official website repository for **Christ Worship Center International** — a sanctuary where community, worship, and spiritual transformation come alive. This project is a creative and deeply thoughtful representation of a vibrant church that lives and breathes fellowship in Christ.
 
-## Project Description
+---
 
-This website serves as a prototype for **[typni.org]**, aiming to showcase [brief description of the project or the purpose of the site]. The design focuses on simplicity, responsiveness, and user interaction to engage the audience.
+## 🎯 Project Purpose
 
-## Technologies Used
-- **HTML**: For creating the structure and layout of the website.
-- **CSS**: For styling and visual design, ensuring a smooth and modern user experience.
-- **JavaScript**: For interactive features, adding dynamic behavior to the website.
+The purpose of this project is to deliver an immersive, responsive, and emotionally resonant online presence for **Christ Worship Center International (CWC)**. It aims to reflect the church's heartbeat — **worship, family, and outreach** — through modern design, uplifting copy, and smooth user experience.
 
-## Features
-- **Responsive Design**: The website adjusts smoothly to different screen sizes, ensuring it looks great on desktops, tablets, and mobile devices.
-- **Interactive Elements**: JavaScript is used to make the website more engaging with interactive buttons, animations, or forms.
-- **Simple Navigation**: Easy-to-use navigation system that allows users to explore the content effortlessly.
+---
 
-## Installation Instructions
+## 🎨 Color Theme
 
-To view and work with this project locally:
+> **Primary Color:** `#800080` (Royal Purple)  
+Symbolizes royalty, spirituality, and reverence — fitting for a church that exalts Jesus Christ as King of Kings.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/elvismusisi/typni.org.git
-# typni.org
+---
+
+## ✍️ Website Features
+
+- **Hero Section:** A warm, inviting welcome to the church family.
+- **About Section:** Detailed and heartfelt introduction to the church's vision and values.
+- **Ministries Section:** Highlighting Youth Empowerment, Worship & Arts, and Community Outreach.
+- **Community & Events:** Real-time glimpse into recurring and upcoming church gatherings.
+- **Impact Stories:** Testimonies from members experiencing spiritual transformation.
+- **Founder Section:** Tribute to Rev. Grace Atieno — the visionary behind the ministry.
+- **Contact Form:** For visitors to easily connect, pray, or reach out for support.
+- **Scroll Percentage Tracker:** A dynamic scroll indicator along the side — modern, sleek, and interactive.
+
+---
+
+## 🧠 UI/UX Design Process
+
+**Empathy & Identity:**
+- Designed with the end-user in mind — welcoming visuals, clean layout, and accessible navigation.
+- Purple and gold tones were chosen to reflect
