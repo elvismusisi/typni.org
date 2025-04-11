@@ -9,28 +9,247 @@
         <!-- Font Awesome CDN -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+    :root {
+      --primary-color: #9e1d5d;
+      --text-color: #333;
+      --bg-color: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header.hero {
+      background: url('images/hero.jpg') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero-content {
+      padding: 3rem 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+    }
+
+    .departments, .services, .biblestudy {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .department-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .department {
+      padding: 1rem;
+      background: #f3f3f3;
+      border-radius: 10px;
+    }
+
+    .department i {
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    form input, form button {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        right: 0;
+        top: 70px;
+        display: none;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+    }
+
+    #navAlert {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #270d00;
+      color: #ca9632;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      font-weight: bold;
+      display: none;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-bar {
+      position: fixed;
+      left: 10px;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background-color: #eee;
+      z-index: 1000;
+    }
+
+    .scroll-marker {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: -5px;
+      background-color: #ca9632;
+      border-radius: 50%;
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <nav class="top-navbar">
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about-us">About</a></li>
-                <li><a href="#impact-section">Our Ministries</a></li>
-            </ul>
-        </nav>
-        
-        <img src="images/logo.jpg" alt="Logo" class="logo">
-    </header>
-    <main id="hero"> 
-        
-        <section class="hero" id="cta-section">
-            <section id="home" class="hero-section">
-        <div class="container text-center">
-            <h1 class="display-4 mb-4" style="margin:80px;">Welcome to Christ Worship Center</h1>
-            <p class="lead mb-4" style="color: white;">A Church without boundaries and where everybody is somebody</p>
-            <button class="cta-btn" style="color:white;">Join Us</button>
+   <div class="scroll-bar">
+    <div class="scroll-marker" id="scrollMarker"></div>
+  </div>
+
+  <header class="hero">
+    <nav class="navbar">
+      <img src="images/logo.jpg" alt="Christ Worship Center International Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#biblestudy">Bible Study</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero-content" id="home">
+      <h1>Welcome to Christ Worship Center International</h1>
+      <p>A Church without boundaries and where everybody is somebody</p>
+    </section>
+       </header>
+
+  <section id="departments" class="departments">
+    <h2>Our Departments</h2>
+    <div class="department-list">
+      <div class="department">
+        <i class="ri-music-2-fill"></i>
+        <h3>Praise & Worship</h3>
+      </div>
+      <div class="department">
+        <i class="ri-prayer-line"></i>
+        <h3>Intercessory</h3>
+      </div>
+      <div class="department">
+        <i class="ri-emotion-happy-line"></i>
+        <h3>Children</h3>
+      </div>
+      <div class="department">
+        <i class="ri-women-line"></i>
+        <h3>Women</h3>
+      </div>
+      <div class="department">
+        <i class="ri-men-line"></i>
+        <h3>Men</h3>
+      </div>
+    </div>
+  </section>
+     <section id="biblestudy" class="biblestudy">
+    <h2>Join Our Bible Study</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <button type="submit">Book a Spot</button>
+    </form>
+    <p id="responseMsg"></p>
+  </section>
+    
         </div>
 
         </section>
@@ -165,6 +384,43 @@
             &copy; 2025 Christ Worship Center Website Project by Elvis Musisi. All rights reserved.
         </footer>
     </main>
+          <script>
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      document.getElementById("responseMsg").innerText = `Thank you, ${name}, you've booked your Bible Study seat!`;
+      document.getElementById("bookingForm").reset();
+    });
+
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const alertBox = document.getElementById("navAlert");
+
+    const messages = {
+      "#home": "Welcome to Christ Worship Center International – Where Faith, Family, and Fellowship Grow",
+      "#departments": "Explore the Ministries of Christ Worship Center International",
+      "#services": "Find Out When We Gather to Worship at Christ Worship Center International",
+      "#biblestudy": "Get Ready for Insightful Bible Study Sessions",
+      "#contact": "Reach Out to Christ Worship Center International – We’re Here for You"
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        const target = link.getAttribute("href");
+        const message = messages[target] || "Navigating Gracefully...";
+        alertBox.textContent = message;
+        alertBox.style.display = "block";
+        setTimeout(() => {
+          alertBox.style.display = "none";
+        }, 3000);
+      });
+    });
+
+    const scrollMarker = document.getElementById("scrollMarker");
+    window.addEventListener("scroll", () => {
+      const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      scrollMarker.style.top = `${scrollPercent}%`;
+    });
+  </script>
     <script src="script.js"></script>
 </body>
 </html>
