@@ -1,4 +1,16 @@
 // script.js
+// Smooth fade-in effect for hero image on load
+window.addEventListener('load', () => {
+  const image = document.querySelector('.hero-image');
+  image.style.opacity = 0;
+  image.style.transition = 'opacity 1s ease-in-out';
+  setTimeout(() => {
+    image.style.opacity = 1;
+  }, 300);
+});
+
+
+
 const toggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
