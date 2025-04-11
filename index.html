@@ -1,37 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Christ Worship Center International</title>
-  <link rel="icon" type="image/png" href="images/logo.jpg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Christ Worship Center International</title>
+    <link rel="icon" type="image/png" href="images/logo.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Font Awesome CDN -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+  
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero-content {
+      padding: 3rem 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      text-align: left;
+    }
+
+    .hero-content h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+    }
+
+ 
+    .department {
+      padding: 1rem;
+      background: #f3f3f3;
+      border-radius: 10px;
+    }
+
+    .department i {
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    form input, form button {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        right: 0;
+        top: 70px;
+        display: none;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+    }
+
+    #navAlert {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #270d00;
+      color: #ca9632;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      font-weight: bold;
+      display: none;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-bar {
+      position: fixed;
+      left: 10px;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background-color: #eee;
+      z-index: 1000;
+    }
+
+    .scroll-marker {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: -5px;
+      background-color: #ca9632;
+      border-radius: 50%;
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="scroll-bar">
+
+   <div class="scroll-bar">
     <div class="scroll-marker" id="scrollMarker"></div>
   </div>
 
   <header class="hero">
     <nav class="navbar">
-      <img src="images/logo.jpg" alt="Logo" class="logo" />
-      <ul class="nav-links" id="navLinks">
+      <img src="images/logo.jpg" alt="Christ Worship Center International Logo" class="logo" />
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#departments">Departments</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#biblestudy">Bible Study</a></li>
         <li><a href="#contact">Contact</a></li>
+    
       </ul>
-      <div class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </div>
     </nav>
     <section class="hero-content" id="home">
+      
+     
     </section>
-  </header>
+       </header>
 
-  <section id="biblestudy" class="biblestudy">
+
+     <section id="biblestudy" class="biblestudy">
     <h2>Join Our Bible Study</h2>
     <form id="bookingForm">
       <input type="text" id="name" placeholder="Your Name" required />
@@ -40,127 +189,176 @@
     </form>
     <p id="responseMsg"></p>
   </section>
+    
+        </div>
 
-  <section>
-    <div class="container">
-      <img src="images/hero.jpg" alt="Image of Church" class="responsive-img" />
-    </div>
-  </section>
-
-  <section id="departments" class="departments">
+        </section>
+            <section>
+           
+             <div class="container">
+                  <img src="images/hero.jpg" alt="Image of Church">
+             </div>
+      <section id="departments" class="departments">
     <h2>Our Departments</h2>
     <div class="department-list">
-      <div class="department"><i class="fas fa-music"></i><h3>Praise & Worship</h3></div>
-      <div class="department"><i class="fas fa-pray"></i><h3>Intercessory</h3></div>
-      <div class="department"><i class="fas fa-child"></i><h3>Children</h3></div>
-      <div class="department"><i class="fas fa-female"></i><h3>Women</h3></div>
-      <div class="department"><i class="fas fa-male"></i><h3>Men</h3></div>
+      <div class="department">
+        <i class="ri-music-2-fill"></i>
+        <h3>Praise & Worship</h3>
+      </div>
+      <div class="department">
+        <i class="ri-prayer-line"></i>
+        <h3>Intercessory</h3>
+      </div>
+      <div class="department">
+        <i class="ri-emotion-happy-line"></i>
+        <h3>Children</h3>
+      </div>
+      <div class="department">
+        <i class="ri-women-line"></i>
+        <h3>Women</h3>
+      </div>
+      <div class="department">
+        <i class="ri-men-line"></i>
+        <h3>Men</h3>
+      </div>
+    </div>
+  </section>
+        <div class="pattern-container" style="display: flex; justify-content: center; align-items: center; height: 300px;">
+            <img src="images/logo.jpg" alt="African pattern">
+        </div>
+        <section class="mission" style="color:white;">
+            <div class="slider">
+                <div class="slider-item">
+                    <p style="color: white;">A sanctuary for worship, </p>
+                </div>
+                <div class="slider-item">
+                    <p style="color: white;">a family in Christ,</p>
+                </div>
+                <div class="slider-item">
+                    <p style="color: white;"> and a community of hope.</p>
+                </div>
+            </div>
+        </section>
+        
+<main class="main-body" id="about-us">
+  <section class="about-us section">
+    <div class="container">
+      <p>
+        We are more than a church — we are a vibrant community rooted in love, worship, and outreach. With hearts wide open and arms extended, we welcome all people into a life-transforming encounter with Jesus Christ. Our vision is to see lives changed, hope restored, and communities renewed through the power of God's presence and the warmth of family.
+      </p>
     </div>
   </section>
 
-  <div class="pattern-container">
-    <img src="images/logo.jpg" alt="African pattern" class="responsive-img" />
-  </div>
-
-  <section class="mission">
-    <div class="slider">
-      <div class="slider-item"><p>A sanctuary for worship,</p></div>
-      <div class="slider-item"><p>a family in Christ,</p></div>
-      <div class="slider-item"><p>and a community of hope.</p></div>
+  <section class="our-services section">
+    <div class="container services">
+      <div class="service-item">
+        <i class="fas fa-user-graduate service-icon"></i>
+        <h3>Youth Empowerment</h3>
+        <p>Raising a generation grounded in truth and ignited by the Spirit.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-chalkboard-teacher service-icon"></i>
+        <h3>Community Outreach</h3>
+        <p>Serving with love, impacting lives, and bringing hope to the hopeless.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-money-bill-wave service-icon"></i>
+        <h3>Community & Events</h3>
+        <p>Stay connected and be part of our vibrant church family through worship nights, prayer gatherings, and service projects that bring people together under the love of Christ.</p>
+      </div>
     </div>
   </section>
 
-  <main class="main-body" id="about-us">
-    <section class="about-us section">
-      <div class="container">
-        <p>
-          We are more than a church — we are a vibrant community rooted in love,
-          worship, and outreach...
+  <section class="impact-section section" id="impact-section">
+    <div class="container impact-frame">
+      <div class="impact-icon">
+        <i class="fas fa-users fa-3x"></i>
+      </div>
+      <h2 class="impact-header">Welcome to Christ Worship Center International</h2>
+      <p class="impact-description">
+         A Church without boundaries and where everybody is somebody
+      </p>
+    </div>
+  </section>
+
+  <section class="photo-collage section">
+    <div class="container photo-grid">
+      <div class="photo-item"><img src="images/image1.jpg" alt="Photo 1"></div>
+      <div class="photo-item"><img src="images/image3.jpg" alt="Photo 3"></div>
+      <div class="photo-item"><img src="images/image4.jpg" alt="Photo 4"></div>
+      <div class="photo-item"><img src="images/image9.jpg" alt="Photo 5"></div>
+      <div class="photo-item"><img src="images/image7.jpg" alt="Photo 6"></div>
+      <div class="photo-item"><img src="images/image5.jpg" alt="Photo 7"></div>
+    </div>
+  </section>
+
+  <section class="cta-section section">
+    <div class="container cta-buttons">
+      <button class="cta-btn primary">Join Now</button>
+      <button class="cta-btn secondary">Learn More</button>
+    </div>
+  </section>
+
+  <section class="founder-section section">
+    <div class="container founder-container">
+      <img src="images/founder.jpg" alt="Charlene Ruto" class="founder-img">
+      <div class="founder-info">
+        <h2>Pastor Jane Kathurima</h2>
+        <p class="founder-title">Resident Pastor, Christ Worship Center International</p>
+        <p class="founder-bio">
+          is the visionary leader and heart behind Christ Worship Center International...
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="our-services section" id="services">
-      <div class="container services">
-        <div class="service-item">
-          <i class="fas fa-user-graduate service-icon"></i>
-          <h3>Youth Empowerment</h3>
-          <p>Raising a generation grounded in truth and ignited by the Spirit.</p>
-        </div>
-        <div class="service-item">
-          <i class="fas fa-chalkboard-teacher service-icon"></i>
-          <h3>Community Outreach</h3>
-          <p>Serving with love, impacting lives, and bringing hope to the hopeless.</p>
-        </div>
-        <div class="service-item">
-          <i class="fas fa-money-bill-wave service-icon"></i>
-          <h3>Community & Events</h3>
-          <p>
-            Stay connected and be part of our vibrant church family through worship
-            nights, prayer gatherings...
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="impact-section section" id="impact-section">
-      <div class="container impact-frame">
-        <div class="impact-icon">
-          <i class="fas fa-users fa-3x"></i>
-        </div>
-        <h2 class="impact-header">Welcome to Christ Worship Center International</h2>
-        <p class="impact-description">
-          A Church without boundaries and where everybody is somebody
-        </p>
-      </div>
-    </section>
-
-    <section class="photo-collage section">
-      <div class="container photo-grid">
-        <div class="photo-item"><img src="images/image1.jpg" alt="Photo 1" /></div>
-        <div class="photo-item"><img src="images/image3.jpg" alt="Photo 3" /></div>
-        <div class="photo-item"><img src="images/image4.jpg" alt="Photo 4" /></div>
-        <div class="photo-item"><img src="images/image9.jpg" alt="Photo 5" /></div>
-        <div class="photo-item"><img src="images/image7.jpg" alt="Photo 6" /></div>
-        <div class="photo-item"><img src="images/image5.jpg" alt="Photo 7" /></div>
-      </div>
-    </section>
-
-    <section class="cta-section section">
-      <div class="container cta-buttons">
-        <button class="cta-btn primary">Join Now</button>
-        <button class="cta-btn secondary">Learn More</button>
-      </div>
-    </section>
-
-    <section class="founder-section section">
-      <div class="container founder-container">
-        <img src="images/founder.jpg" alt="Founder" class="founder-img" />
-        <div class="founder-info">
-          <h2>Pastor Jane Kathurima</h2>
-          <p class="founder-title">Resident Pastor</p>
-          <p class="founder-bio">
-            Is the visionary leader and heart behind Christ...
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Christ Worship Center International. All rights reserved.</p>
+  <footer class="site-footer">
+    &copy; 2025 Christ Worship Center Website Project by Elvis Musisi. All rights reserved.
   </footer>
+</main>
 
-  <div id="navAlert">Menu toggled!</div>
+        
+      
+        
+        
+   
+          <script>
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      document.getElementById("responseMsg").innerText = `Thank you, ${name}, you've booked your Bible Study seat!`;
+      document.getElementById("bookingForm").reset();
+    });
 
-  <script>
-    document.getElementById("menuToggle").addEventListener("click", () => {
-      document.getElementById("navLinks").classList.toggle("active");
-      document.getElementById("navAlert").style.display = "block";
-      setTimeout(() => {
-        document.getElementById("navAlert").style.display = "none";
-      }, 2000);
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const alertBox = document.getElementById("navAlert");
+
+    const messages = {
+      "#home": "Welcome to Christ Worship Center International – Where Faith, Family, and Fellowship Grow",
+      "#departments": "Explore the Ministries of Christ Worship Center International",
+      "#services": "Find Out When We Gather to Worship at Christ Worship Center International",
+      "#biblestudy": "Get Ready for Insightful Bible Study Sessions",
+      "#contact": "Reach Out to Christ Worship Center International – We’re Here for You"
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        const target = link.getAttribute("href");
+        const message = messages[target] || "Navigating Gracefully...";
+        alertBox.textContent = message;
+        alertBox.style.display = "block";
+        setTimeout(() => {
+          alertBox.style.display = "none";
+        }, 3000);
+      });
+    });
+
+    const scrollMarker = document.getElementById("scrollMarker");
+    window.addEventListener("scroll", () => {
+      const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      scrollMarker.style.top = `${scrollPercent}%`;
     });
   </script>
+    <script src="script.js"></script>
 </body>
 </html>
