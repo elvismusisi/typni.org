@@ -1,3 +1,81 @@
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white);
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .department-list,
+  .services,
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-img {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  form input,
+  form button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
 /* General Reset */
 * {
   box-sizing: border-box;
