@@ -1,4 +1,130 @@
- :root {
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+/* Utility Containers */
+.section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Typography */
+.impact-header {
+  text-align: center;
+  color: #3b1b72;
+  margin-bottom: 1rem;
+}
+
+.impact-description,
+.about-us p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.service-item {
+  flex: 1 1 250px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: #3b1b72;
+  margin-bottom: 10px;
+}
+
+/* Photo Collage */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* CTA Section */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-btn {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn.primary {
+  background: #3b1b72;
+  color: #fff;
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: #3b1b72;
+  border: 2px solid #3b1b72;
+}
+
+/* Founder */
+.founder-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.founder-img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.founder-info {
+  flex: 1;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #3b1b72;
+  color: white;
+}
+
+:root {
       --primary: #9e1d5d;
       --light: #fff;
       --dark: #1e1e1e;
