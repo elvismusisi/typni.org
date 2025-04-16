@@ -1,3 +1,141 @@
+
+/* Departments Section */
+#departments {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+}
+
+#departments .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#departments h2 {
+  font-size: 2.5rem;
+  color: #3b1b72;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+#departments h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #9e1d5d;
+}
+
+.department-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.department {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.department:hover {
+  transform: translateY(-5px);
+}
+
+.department i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #3b1b72;
+}
+
+.department h3 {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Bible Study Section */
+#biblestudy {
+  padding: 4rem 1rem;
+  background-color: #3b1b72;
+  text-align: center;
+}
+
+#biblestudy .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#biblestudy h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+#bookingForm {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+}
+
+#bookingForm input {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#bookingForm button {
+  padding: 1rem 2rem;
+  background-color: #9e1d5d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#bookingForm button:hover {
+  background-color: #801444;
+}
+
+#responseMsg {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .department-list {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  #departments h2,
+  #biblestudy h2 {
+    font-size: 2rem;
+  }
+
+  #bookingForm {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .department-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* Mobile-First Approach - Base Styles */
 * {
   box-sizing: border-box;
