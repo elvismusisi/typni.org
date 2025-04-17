@@ -1,4 +1,32 @@
 // script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Add hamburger button to DOM
+    const hamburgerHtml = `
+        <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    `;
+    document.querySelector('.navbar').insertAdjacentHTML('beforeend', hamburgerHtml);
+
+    // Toggle mobile menu
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+});
 // Smooth fade-in effect for hero image on load
 window.addEventListener('load', () => {
   const image = document.querySelector('.hero-image');
