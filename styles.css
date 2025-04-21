@@ -1,3 +1,115 @@
+/* ===== CTA Section Design ===== */
+/* Designed for visual impact and clear hierarchy */
+.cta-section {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f9f6fb 0%, #f1ebf5 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(158, 29, 93, 0.1);
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(59, 27, 114, 0.1);
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.container.cta-buttons {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Primary Button Design */
+.cta-btn.primary {
+  background: #9e1d5d;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(158, 29, 93, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn.primary:hover {
+  background: #87184f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(158, 29, 93, 0.4);
+}
+
+/* Secondary Button Design */
+.cta-btn.secondary {
+  background: #3b1b72;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn.secondary:hover {
+  background: #2c1355;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 27, 114, 0.3);
+}
+
+/* Micro-interactions */
+.cta-btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container.cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+/* Accessibility Features */
+.cta-btn:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+
 /* Mobile Navigation */
 .navbar {
     display: flex;
